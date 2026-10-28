@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_bones"
-    android:padding="16dp"
+    android:padding="20dp"
     tools:context=".RandomDogActivity">
 
     <TextView
@@ -14,46 +14,74 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Random Dog"
-        android:textSize="24sp"
+        android:textColor="#5E3B2E"
+        android:textSize="36sp"
         android:textStyle="bold"
+        android:letterSpacing="0.02"
+        android:layout_marginTop="36dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/dogImage"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imageCard"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="Random dog image"
-        android:background="#EEEEEE"
-        app:layout_constraintTop_toBottomOf="@id/titleText"
-        app:layout_constraintBottom_toTopOf="@id/breedText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="6dp"
+        app:strokeWidth="0dp"
         app:layout_constraintDimensionRatio="1:1"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/dogImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ECE3DE"
+            android:contentDescription="Random dog image"
+            android:scaleType="centerCrop" />
+
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/breedText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Breed: unknown"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/fetchButton"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_breed_chip"
+        android:paddingStart="22dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="10dp"
+        android:text="Status: unknown"
+        android:textColor="#7D4D3D"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageCard" />
 
     <Button
         android:id="@+id/fetchButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/btn_get_dog"
+        android:letterSpacing="0.03"
+        android:stateListAnimator="@null"
         android:text="Get Random Dog"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

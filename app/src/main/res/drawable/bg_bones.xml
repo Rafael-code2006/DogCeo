@@ -8,10 +8,10 @@
         </shape>
     </item>
 
-    <!-- White bones repeated across the screen -->
+    <!-- Small white bones at 45°, repeated across the screen -->
     <item>
         <bitmap
-            android:src="@drawable/bone_tile"
+            android:src="@drawable/bones_pattern"
             android:tileMode="repeat"
             android:gravity="top|left" />
     </item>
