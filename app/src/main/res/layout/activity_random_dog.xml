@@ -5,6 +5,7 @@
     android:id="@+id/randomDog"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_bones"
     android:padding="16dp"
     tools:context=".RandomDogActivity">
 
